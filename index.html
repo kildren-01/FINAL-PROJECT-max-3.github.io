@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="settings.css">
+  <link rel="stylesheet" href="appIcons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <title>Blue Light Filtering</title>
+</head>
+
+
+<body>
+
+  <div id="body">
+
+    <header>
+      <div id="Navigate" style="flex: 7;">
+
+        <label id="H" onclick="updatePanelTransform(0)" class="hover-effect">
+          <i class="fas fa-home header-icons"></i>
+        </label>
+
+        <label id="B" onclick="scrollToLeft()" class="hover-effect">
+          <i class="fas fa-arrow-circle-left header-icons"></i>
+        </label>
+
+        <label id="F" onclick="scrollToRight()" class="hover-effect">
+          <i class="fas fa-arrow-circle-right header-icons"></i>
+        </label>
+
+
+        <label id="path" class="navigate" onclick="   updatePanelTransform(0)">HOME </label>
+        <label id="path" class="navigate" style="display: none;"> NEXT</label>
+        <label id="path" class="navigate" style="display: none;"> NEXT</label>
+        <label id="path" class="navigate" style="display: none;"> NEXT</label>
+        <label id="path" class="navigate" style="display: none;"> NEXT</label>
+        <label id="path" class="navigate" style="display: none;"> NEXT</label>
+        <label id="path" class="navigate" style="display: none;"> NEXT</label>
+        <label id="path" class="navigate" style="display: none;"> NEXT</label>
+        <label id="path" class="navigate" style="display: none;"> NEXT</label>
+        <label id="path" class="navigate" style="display: none;"> NEXT</label>
+        <label id="path" class="navigate" style="display: none;"> NEXT</label>
+        <label id="path" class="navigate" style="display: none;"> NEXT</label>
+        <label id="path" class="navigate" style="display: none;"> NEXT</label>
+        <label id="path" class="navigate" style="display: none;"> NEXT</label>
+        <label id="path" class="navigate" style="display: none;"> NEXT</label>
+        <label id="path" class="navigate" style="display: none;"> NEXT</label>
+        <label id="path" class="navigate" style="display: none;"> NEXT</label>
+        <label id="path" class="navigate" style="display: none;"> NEXT</label>
+        <label id="path" class="navigate" style="display: none;"> NEXT</label>
+        <label id="path" class="navigate" style="display: none;"> NEXT</label>
+        <label id="path" class="navigate" style="display: none;"> NEXT</label>
+
+      </div>
+
+      <div id="userAccount">
+
+        <label for="registerL" class="clickable-label" onclick="register0()">Register</label>
+        <label for="usernameL" class="clickable-label" onclick="logIn0()">Login</label>
+        <label class="clickable-label" onclick="windowManager('-')">
+          <i class="fas fa-circle" style="color: #3498db; font-size: 14px;"></i>
+        </label>
+
+        <label id="o" class="clickable-label" onclick="windowManager('o')">
+          <i class="fas fa-circle" style="color: blueviolet; font-size: 14px;"></i>
+        </label>
+
+        <label id="x" class="clickable-label" onclick="windowManager('x')">
+          <i class="fas fa-circle" style="color: purple; font-size: 14px;"></i>
+        </label>
+
+      </div>
+
+    </header>
+
+    <div id="panel0">
+
+
+      <div id="panel1">
+        <div class="horizontal-line" id="HOME2" onclick="crookedScrowLeft(0)">
+          <i class="fas fa-home fa-2x menu-icons"></i> HOME
+          <div id="homeBadge" class="badges" style="display: none;"></div>
+        </div>
+        <div class="horizontal-line" id="HISTORY" onclick="crookedScrowLeft(2)">
+          <i class="fas fa-history fa-2x menu-icons"></i> HISTORY
+          <div id="historyBadge" class="badges" style="display: none;"></div>
+        </div>
+        <div class="horizontal-line" id="SETTINGS" onclick="crookedScrowLeft(1)">
+          <i class="fas fa-cog fa-2x menu-icons"></i> SETTINGS
+          <div id="settingsBadge" class="badges" style="display: none;"></div>
+        </div>
+        <div class="horizontal-line" id="NOTIFICATIONS" onclick="crookedScrowLeft(7)">
+          <i class="fas fa-bell fa-2x menu-icons"></i> NOTIFICATIONS
+          <div id="notificationsBadge" class="badges" style="display: none;"></div>
+        </div>
+        <div class="horizontal-line" id="MILESTONES" onclick="crookedScrowLeft(8)">
+          <i class="fas fa-flag fa-2x menu-icons"></i> MILESTONES
+          <div id="milestonesBadge" class="badges" style="display: none;"></div>
+        </div>
+        <div class="horizontal-line" id="MANAGE ACCOUNT" onclick="crookedScrowLeft(9)">
+          <i class="fas fa-user fa-2x menu-icons"></i> MANAGE ACCOUNT
+          <div id="manageAccountBadge" class="badges" style="display: none;"></div>
+        </div>
+        <div class="horizontal-line" id=" FQA" onclick="crookedScrowLeft(10)">
+          <i class="fas fa-info-circle fa-2x menu-icons"></i> FQA
+          <div id="fqaBadge" class="badges" style="display: none;"></div>
+        </div>
+        <div class="horizontal-line" id="E-LEARNING" onclick="crookedScrowLeft(11)">
+          <i class="fas fa-graduation-cap fa-2x menu-icons"></i> E-LEARNING
+          <div id="eLearningBadge" class="badges" style="display: none;"></div>
+        </div>
+        <div class="horizontal-line" id="PRESENTATION" onclick="crookedScrowLeft(12)">
+          <i class="fas fa-chalkboard-teacher fa-2x menu-icons"></i> PRESENTATION
+          <div id="presentationBadge" class="badges" style="display: none;"></div>
+        </div>
+        <div class="horizontal-line" id="BLOG" onclick="crookedScrowLeft(13)">
+          <i class="fas fa-rss fa-2x menu-icons"></i> BLOG
+          <div id="blogBadge" class="badges" style="display: none;"></div>
+        </div>
+        <div class="horizontal-line" id="CREDITS" onclick="crookedScrowLeft(14)">
+          <i class="fas fa-list fa-2x menu-icons"></i> CREDITS
+          <div id="creditsBadge" class="badges" style="display: none;"></div>
+        </div>
+        <div class="horizontal-line" id="SEARCH" onclick="crookedScrowLeft(15)" style="display: none;">
+          <i class="fas fa-search fa-2x menu-icons"></i> SEARCH
+          <div id="searchBadge" class="badges" style="display: none;"></div>
+        </div>
+
+
+      </div>
+
+      <div id="panel2">
+
+
+        <div id="panel3">
+
+          <div id="infoHUD">
+            <p id="formName">DEVICES</p>
+            <p id="Tip1">Select device to optimize for best calibration</p>
+          </div>
+
+
+          <div id="panel7">
+
+            <div id="panel10">
+
+              <div id="panel11">
+
+
+                <div class="appButton" id="appButton0" style="display: none;" onclick=" addElement('appButton',0)">
+                  <i class="fab fa-windows"></i> WINDOWS
+                </div>
+
+                <div class="appButton" id="appButton1" style="display: none;" onclick=" addElement('appButton',1)">
+                  <label id="Ax" onclick="removeElement('appButton',1)"></label>
+                  <i class="fas fa-tv"></i> TV
+                </div>
+
+                <div class="appButton" id="appButton2" style="display: none;" onclick=" addElement('appButton',2)">
+                  <label id="Ax" onclick="removeElement('appButton',1)"></label>
+                  <i class="fas fa-laptop"></i> MacOS
+                </div>
+
+                <div class="appButton" id="appButton3" style="display: none;" onclick=" addElement('appButton',3)">
+                  <label id="Ax" onclick="removeElement('appButton',1)"></label>
+                  <i class="fas fa-tablet-alt"></i> iOS
+                </div>
+
+                <div class="appButton" id="appButton4" style="display: none;" onclick=" addElement('appButton',4)">
+                  <label id="Ax" onclick="removeElement('appButton',1)"></label>
+                  <i class="fas fa-mobile-alt"></i> ANDROID
+                </div>
+
+                <div class="appButton" id="appButton5" style="display: block;" onclick=" addElement('appButton',5)">
+                  <label id="Ax" onclick="removeElement('appButton',1)"></label>
+                  <i class="fas fa-tablet-alt"></i> ADD DEVICE
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div id="panel4">
+
+            <div id="panel5">
+              <div class="burger-menu">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+
+              </div>
+              <input type="text" id="searchForm" name="searchForm" placeholder="Type your search query..."
+                oninput="appendElementBySearchInput();">
+              <div id="searchButton" class="buttons" onclick=" clearInputText();">CLEAR</div>
+
+            </div>
+
+
+            <div id="panel9">
+
+              <div id="customAlert" class="popUp">
+                <p id="popUpMessage">Changes not saved. Please log in.</p>
+              </div>
+              <div id="HOME" class="subP">
+
+
+                <div class="HUD" id="HUD">
+                  <div class="hud1" onclick="crookedScrowLeft(3)">
+                    <canvas id="canvas1" width="200" height="200"></canvas>
+                  </div>
+                  <div class="hud1" onclick="crookedScrowLeft(4)">
+                    <canvas id="canvas2" width="200" height="200"></canvas>
+                  </div>
+                  <div class="hud1" onclick="crookedScrowLeft(5)">
+                    <canvas id="canvas3" width="200" height="200"></canvas>
+                  </div>
+                  <div class="hud1" onclick="crookedScrowLeft(6)">
+                    <canvas id="canvas4" width="200" height="200"></canvas>
+                  </div>
+                </div>
+                <div class="configurator" id="configurator0">
+
+                  <div id="slider-group1" class="slider-group">
+                    <div class="slider-name">
+                      <label id="sliderLabel1" class="slider-alias">BRIGHTNESS</label>
+                    </div>
+                    <div id="brightness" class="sliders" onclick="sliderClickTrigger(event, 1,'#marker1')">
+                      <div id="filler1" class="slider-filler"></div>
+                      <div id="marker1" class="perpendicular-line" draggable="true"
+                        ondragstart="dragStart(event,'marker1')" ondrag="dragging(event)" ondragend=" dragEnd(null)">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="slider-group2" class="slider-group">
+                    <div class="slider-name">
+                      <label id="sliderLabel2" class="slider-alias">WARMTH</label>
+                    </div>
+                    <div id="red" class="sliders" onclick="sliderClickTrigger(event, 2,'#marker2')">
+                      <div id="filler2" class="slider-filler"></div>
+                      <div id="marker2" class="perpendicular-line" draggable="true"
+                        ondragstart="dragStart(event,'marker2')" ondrag="dragging(event)" ondragend="dragEnd(null)">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="slider-group3" class="slider-group">
+                    <div class="slider-name">
+                      <label id="sliderLabel3" class="slider-alias">OPACITY</label>
+                    </div>
+                    <div id="blue" class="sliders" onclick="sliderClickTrigger(event, 3,'#marker3')">
+                      <div id="filler3" class="slider-filler"></div>
+                      <div id="marker3" class="perpendicular-line" draggable="true"
+                        ondragstart="dragStart(event,'marker3')" ondrag="dragging(event)" ondragend="dragEnd(null)">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="slider-group4" class="slider-group">
+                    <div class="slider-name">
+                      <label id="sliderLabel4" class="slider-alias">AVERAGE</label>
+                    </div>
+                    <div id="green" class="sliders">
+                      <div id="filler4" class="slider-filler"></div>
+                      <div id="marker4" class="perpendicular-line" draggable="false">
+                        <!-- ondragstart="dragStart(event,'green-Marker')" ondrag="dragging(event)" ondragend="dragEnd(null)" -->
+
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+              <div id="Settings" class="subP" style="display: none;">
+                <div id="subP7b" class="night">
+
+                  <div class="preferrences" id="nightMode">
+
+                    <label onclick="expandDiv('miniOption',0)" class="settingName">NIGHT MODE</label>
+                    <label class="settingDescription" onclick="expandDiv('miniOption',0)">Schedule when to turn on or
+                      off
+                      night mode</label>
+
+                    <div id="miniOption0" class="miniOption">
+
+                      <div class="settingItem">
+                        <label style="margin-left: 100px; flex: 1;flex-grow: 0.5;">NIGHT </label>
+                        <input type="number" class="textBoxes" min="0" maxlength="2" max="23" id="nightModeInput0"
+                          placeholder="00" style="width: 90px; height: 15px;">
+                        <input type="number" class="textBoxes" min="0" maxlength="2" max="59" id="nightModeInput00"
+                          placeholder="00" style="width: 90px; height: 15px;">
+                        <input type="number" class="textBoxes" min="0" maxlength="3" max="100" id="nightModeInput000"
+                          placeholder="BRIGHTNESS" style="width: 90px; height: 15px; margin-left: 10px">
+
+                        <label class="saveAlarm" id=saveAlarm00>
+
+                          <label class="switch" id="nightModeStart">
+                            <input type="checkbox" onclick="toggleAlarm('nightModeInput',0,'nightModeStart',null)" />
+                            <span class="custom-slider round"></span>
+                          </label>
+                        </label>
+                      </div>
+
+                      <div class="settingItem">
+                        <label style="margin-left: 100px; flex: 1;flex-grow: 0.5;">DAY </label>
+                        <input type="number" class="textBoxes" min="0" maxlength="2" max="23" id="nightModeInput1"
+                          placeholder="00" style="width: 90px; height: 15px;">
+                        <input type="number" class="textBoxes" min="0" maxlength="2" max="59" id="nightModeInput11"
+                          placeholder="00" style="width: 90px; height: 15px;">
+                        <input type="number" class="textBoxes" min="0" maxlength="3" max="100" id="nightModeInput111"
+                          placeholder="BRIGHTNESS" style="width: 90px; height: 15px; margin-left: 10px">
+
+                        <label class="saveAlarm" id=saveAlarm01>
+
+                          <label class="switch" id="nightModeEnd">
+                            <input type="checkbox" onclick="toggleAlarm('nightModeInput',1,'nightModeEnd',null)" />
+                            <span class="custom-slider round"></span>
+                          </label>
+                        </label>
+                      </div>
+
+                      <label class="notifyOption" style="display: flex;">
+                        <label>NOTIFY ME</label>
+                        <label class="switch">
+                          <input type="checkbox" id="Note0" onclick="toggleNotification('Note0')" />
+                          <span class="custom-slider round"></span>
+                        </label>
+                      </label>
+
+
+
+                    </div>
+                  </div>
+
+                  <div class="preferrences" id="autoBrightness">
+
+                    <label class="settingName">ADJUST BRIGHTNESS</label>
+                    <label class="settingDescription" onclick="expandDiv('miniOption',1)">Set auto adjust or custom set
+                      daily brightness</label>
+
+                    <label class="notifyOption">
+                      <label>AUTO ADJUST</label>
+                      <label class="switch">
+                        <input type="checkbox" id="auto1"
+                          onclick="expandDiv('miniOption',1);togglAutoUpdates('auto1',1)" />
+                        <span class="custom-slider round"></span>
+                      </label>
+                    </label>
+
+                    <div id="miniOption1" class="miniOption">
+
+                      <div class="settingItem" id="brightnessAlarm0" style=" display: flex;">
+                        <label style="margin-left: 100px; flex: 1;flex-grow: 0.5;">BRIGHTNESS1 </label>
+                        <input type="number" class="textBoxes" min="0" maxlength="2" max="23" id="brightnessAlarmInput0"
+                          placeholder="00" style="width: 90px; margin-left: -10px; height: 15px;">
+                        <input type="number" class="textBoxes" min="0" maxlength="2" max="59"
+                          id="brightnessAlarmInput00" placeholder="00"
+                          style="width: 90px; margin-left: -10px; height: 15px;">
+                        <input type="number" class="textBoxes" min="0" maxlength="3" max="100"
+                          id="brightnessAlarmInput000" placeholder="BRIGHTNESS"
+                          style="width: 90px; height: 15px; margin-left: 10px">
+
+                        <label class="saveAlarm" id="saveAlarm10">
+
+                          <label class="switch">
+                            <input type="checkbox"
+                              onclick="toggleAlarm('brightnessAlarmInput',0,'saveAlarm','brightnessAlarm'); " />
+                            <span class="custom-slider round"></span>
+                          </label>
+                        </label>
+
+                      </div>
+
+                      <div class="settingItem" id="brightnessAlarm1" style=" display: none;">
+                        <label style="margin-left: 100px; flex: 1;flex-grow: 0.5;">BRIGHTNESS2 </label>
+                        <input type="number" class="textBoxes" min="0" maxlength="2" max="23" id="brightnessAlarmInput1"
+                          placeholder="00" style="width: 90px; margin-left: -10px; height: 15px;">
+                        <input type="number" class="textBoxes" min="0" maxlength="2" max="59"
+                          id="brightnessAlarmInput11" placeholder="00"
+                          style="width: 90px; margin-left: -10px; height: 15px;">
+                        <input type="number" class="textBoxes" min="0" maxlength="3" max="100"
+                          id="brightnessAlarmInput111" placeholder="BRIGHTNESS"
+                          style="width: 90px; height: 15px; margin-left: 10px">
+
+                        <label class="saveAlarm" id=saveAlarm11>
+
+                          <label class="switch">
+                            <input type="checkbox"
+                              onclick="toggleAlarm('brightnessAlarmInput',1,'saveAlarm','brightnessAlarm'); " />
+                            <span class="custom-slider round"></span>
+                          </label>
+                        </label>
+                      </div>
+
+                      <div class="settingItem" id="brightnessAlarm2" style=" display: none;">
+                        <label style="margin-left: 100px; flex: 1;flex-grow: 0.5;">BRIGHTNESS3 </label>
+                        <input type="number" class="textBoxes" min="0" maxlength="2" max="23" id="brightnessAlarmInput2"
+                          placeholder="00" style="width: 90px; margin-left: -10px; height: 15px;">
+                        <input type="number" class="textBoxes" min="0" maxlength="2" max="59"
+                          id="brightnessAlarmInput22" placeholder="00"
+                          style="width: 90px; margin-left: -10px; height: 15px;">
+                        <input type="number" class="textBoxes" min="0" maxlength="3" max="100"
+                          id="brightnessAlarmInput222" placeholder="BRIGHTNESS"
+                          style="width: 90px; height: 15px; margin-left: 10px">
+
+                        <label class="saveAlarm" id=saveAlarm12>
+
+                          <label class="switch">
+                            <input type="checkbox"
+                              onclick="toggleAlarm('brightnessAlarmInput',2,'saveAlarm','brightnessAlarm'); " />
+                            <span class="custom-slider round"></span>
+                          </label>
+                        </label>
+                      </div>
+
+                      <div class="settingItem" id="brightnessAlarm3" style=" display: none;">
+                        <label style="margin-left: 100px; flex: 1;flex-grow: 0.5;">BRIGHTNESS4 </label>
+                        <input type="number" class="textBoxes" min="0" maxlength="2" max="23" id="brightnessAlarmInput3"
+                          placeholder="00" style="width: 90px; margin-left: -10px; height: 15px;">
+                        <input type="number" class="textBoxes" min="0" maxlength="2" max="59"
+                          id="brightnessAlarmInput33" placeholder="00"
+                          style="width: 90px; margin-left: -10px; height: 15px;">
+                        <input type="number" class="textBoxes" min="0" maxlength="3" max="100"
+                          id="brightnessAlarmInput333" placeholder="BRIGHTNESS"
+                          style="width: 90px; height: 15px; margin-left: 10px">
+
+                        <label class="saveAlarm" id=saveAlarm13>
+
+                          <label class="switch">
+                            <input type="checkbox"
+                              onclick="toggleAlarm('brightnessAlarmInput',3,'saveAlarm','brightnessAlarm'); " />
+                            <span class="custom-slider round"></span>
+                          </label>
+                        </label>
+                      </div>
+
+                      <label class="notifyOption" style="display: flex;">
+                        <label>NOTIFY ME</label>
+                        <label class="switch">
+                          <input type="checkbox" id="Note1" onclick="toggleNotification('Note1')" />
+                          <span class="custom-slider round"></span>
+                        </label>
+                      </label>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="History" class="subP">
+                <div class="loader">
+                  <div id="chart_div0" style=" height: 450px;"></div>
+                  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                  <script type="text/javascript">
+
+                    try {
+                      google.charts.load('current', { 'packages': ['corechart'] });
+                      google.charts.setOnLoadCallback();
+                    }
+                    catch { }
+
+                  </script>
+
+                </div>
+
+              </div>
+              <div id="Brightness" class="subP">
+                <div class="loader">
+                  <div id="chart_div1" style=" height: 450px;"></div>
+                  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                  <script type="text/javascript">
+                    try {
+                      google.charts.load('current', { 'packages': ['corechart'] });
+                      google.charts.setOnLoadCallback();
+                    }
+                    catch { }
+
+                  </script>
+                </div>
+              </div>
+              <div id="Warmth" class="subP">
+                <div class="loader">
+                  <div id="chart_div2" style=" height: 450px;"></div>
+                  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                  <script type="text/javascript">
+                    try {
+                      google.charts.load('current', { 'packages': ['corechart'] });
+                      google.charts.setOnLoadCallback();
+                    }
+                    catch { }
+
+                  </script>
+                </div>
+              </div>
+              <div id="Opacity" class="subP">
+                <div class="loader">
+                  <div id="chart_div3" style=" height: 450px;"></div>
+                  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                  <script type="text/javascript">
+                    try {
+                      google.charts.load('current', { 'packages': ['corechart'] });
+                      google.charts.setOnLoadCallback();
+                    }
+                    catch { }
+
+                  </script>
+                </div>
+              </div>
+              <div id="Average" class="subP">
+                <div class="loader">
+                  <div id="chart_div4" style=" height: 450px;"></div>
+                  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                  <script type="text/javascript">
+                    try {
+                      google.charts.load('current', { 'packages': ['corechart'] });
+                      google.charts.setOnLoadCallback();
+                    }
+                    catch { }
+
+                  </script>
+                </div>
+              </div>
+              <div id="Notifications" class="subP">
+                <div id="Alerts" class="notifications" style="overflow-y: scroll;">
+
+                  <div class="preferrences" id="message0">
+                    <div id="noteBadge0" class="badges"></div>
+                    <label id='noteName0' class="noteName">GOOD MORNING</label>
+                    <label id="note0" class="note">You dont have any notifications.</label>
+                    <div id="timeStamp0" class="timeStamp" style="right: 40px;"></div>
+
+                    <label class="notifyOption">TURN OFF NOTIFICATIONS
+                      <label class="noteTime"></label>
+                      <label class="switch">
+                        <input type="checkbox" class="noteX">
+                        <span class="custom-slider round"></span>
+                      </label>
+                    </label>
+                  </div>
+
+                </div>
+              </div>
+              <div id="Milestone" class="subP">
+                <div id="quests" class="reminders">
+                  <div class="fas fa-flag fa-2x menu-icons" id="results">
+                  </div>
+                </div>
+
+              </div>
+              <div id="Manage Account" class="subP">
+                <div id="account" class="reminders">
+                  <div class="fas fa-user fa-2x menu-icons" id="results">
+
+                  </div>
+                </div>
+
+              </div>
+              <div id="Fqa" class="subP">
+                <div id="fqaOptions" class="questions">
+
+                  <div class="preferrences" id="devices" onclick="toggleView('questions')">
+                    <label onclick="expandDiv('help',0)" class="settingName">HOME</label>
+                    <label class="settingDescription" onclick="expandDiv('help',0)">Learn how the main window display
+                      functions</label>
+                    <div id="help0" class="helpInfo"></div>
+                  </div>
+
+                  <div class="preferrences" id="devices">
+                    <label onclick="expandDiv('help',0)" class="settingName">DEVICES</label>
+                    <label class="settingDescription" onclick="expandDiv('help',0)">View all you BlueLight filter stats
+                      from all your devices</label>
+                    <div id="help0" class="helpInfo"></div>
+                  </div>
+
+                  <div class="preferrences" id="preferrences">
+                    <label onclick="expandDiv('help',1)" class="settingName">PREFERENCES</label>
+                    <label class="settingDescription" onclick="expandDiv('help',1)">Set customizable schedule to
+                      seemlessly protect your eyes</label>
+                    <div id="help1" class="helpInfo"></div>
+                  </div>
+
+                  <div class="preferrences" id="help">
+                    <label onclick="expandDiv('help',2)" class="settingName">LAUNCH ON STARTUP</label>
+                    <label class="settingDescription" onclick="expandDiv('help',2)">Continously run the filter in the
+                      background</label>
+                    <div id="help2" class="helpInfo"></div>
+                  </div>
+
+                  <div class="preferrences" id="help">
+                    <label onclick="expandDiv('help',3)" class="settingName">HISTORY</label>
+                    <label class="settingDescription" onclick="expandDiv('help',3)">Visually compare you light
+                      consumption
+                      history</label>
+                    <div id="help3" class="helpInfo"></div>
+                  </div>
+
+                  <div class="preferrences" id="help">
+                    <label onclick="expandDiv('help',4)" class="settingName">MILESTONES</label>
+                    <label class="settingDescription" onclick="expandDiv('help',4)">Set light consumption goals for
+                      yourself</label>
+                    <div id="help4" class="helpInfo"></div>
+                  </div>
+
+                </div>
+              </div>
+              <div id="E-LEARNING" class="subP">
+                <div id="class" class="reminders">
+                  <div class="fas fa-graduation-cap fa-2x menu-icons" id="results">
+
+                  </div>
+                </div>
+
+              </div>
+              <div id="Presentation" class="subP">
+                <div id="class" class="reminders">
+                  <div class="fas fa-chalkboard-teacher fa-2x menu-icons" id="results">
+                  </div>
+                </div>
+
+              </div>
+              <div id="Blog" class="subP">
+                <div id="blogger" class="reminders">
+                  <div class="fas fa-rss fa-2x menu-icons" id="results">
+                  </div>
+                </div>
+
+              </div>
+              <div id="Credits" class="subP">
+                <div id="class" class="reminders">
+                  <div class="fas fa-list fa-2x menu-icons" id="results">
+                  </div>
+                </div>
+              </div>
+              <div id="Search" class="subP" style="overflow-y: auto;">
+                <div class="searchResult">
+
+                  <div class="fa-search" id="results"></div>
+                  <div class="searchResult0"> </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="configurator" id="xcxc" style="display: none;">
+
+              <div id="slider-group" class="slider-group0">
+                <div class="slider-name">
+                  <label id="brightnessLabel" class="slider-alias">DEEPLINK</label>
+                </div>
+                <div id="brightness" class="sliders" onclick="sliderClickTrigger(event, 0,'#marker0')">
+                  <div id="filler" class="slider-filler"></div>
+                  <div id="marker0" class="perpendicular-line" draggable="true" ondragstart="dragStart(event,'marker0')"
+                    ondrag="dragging(event)" ondragend=" dragEnd(null)">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="panel8">
+
+              <footer id="footer">
+                <p>&copy; 2024 BlueLight Filter. All Rights Reserved. Contact: travahchiweshe@gmail.com</p>
+
+              </footer>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+  <!-- Overlay container -->
+  <div id="overlay1" class="overlay" onclick="closeOverlayOnClickOutside(event)">
+    <div class="login-container">
+
+      <label id="Ax" onclick="closeOverlay()"></label>
+      <label for="username">Username:</label>
+      <input type="text" id="usernameL" placeholder="Enter your username" value="">
+
+      <label for="password">Password:</label>
+      <input type="password" id="passwordL" placeholder="Enter your password" value="">
+
+      <label class="notifyOption" style="margin-left: 72%; margin-bottom: -15px; margin-top: 10px;">
+        <label class="login" style="margin-top: 10px;">Remember</label>
+        <label class="switch" style="left: 100%;">
+          <input type="checkbox" class="note0" id="remember0" onclick="toggleAutoLogIn(this.id)">
+          <span class="custom-slider round"></span>
+        </label>
+      </label>
+
+      <button id="loginBtnL" class=accdiv>Login</button>
+    </div>
+  </div>
+  <!-- Overlay container -->
+  <div id="overlay2" class="overlay" onclick="closeOverlayOnClickOutside(event)">
+    <div class="register-container">
+
+      <label id="Ax" onclick="closeOverlay()"></label>
+      <label for="username">Username:</label>
+      <input type="text" id="usernameR" placeholder="Enter your username" value="">
+
+      <label for="password">Password:</label>
+      <input type="password" id="passwordR" placeholder="Enter your password" value="">
+
+      <label for="password">Password:</label>
+      <input type="password" id="password2" placeholder="Confirm your password" value="">
+
+      <label class="notifyOption" style="margin-left: 72%; margin-bottom: -15px; margin-top: 10px; display: none;">
+        <label class="login" style="margin-top: 10px;">Remember</label>
+        <label class="switch" style="left: 100%;">
+          <input type="checkbox" class="note0" id="remember1" onclick="toggleAutoLogIn(this.id)">
+          <span class="custom-slider round"></span>
+        </label>
+      </label>
+
+      <button id="loginBtnR" class=accdiv>Register</button>
+    </div>
+  </div>
+  <!-- Overlay container -->
+  <div id="controlPanel" class="utility-panel">
+    <div class="widget">
+      <canvas id="canvasx" width="60" height="60"></canvas>
+      <canvas id="canvas" width="60" height="60"></canvas>
+      <i id="blueSwitch" class="fas fa-power-off" onclick="toggleBlueSwitch()"></i>
+
+    </div>
+
+    <div class="icon-label">
+      <span id="timerLabel" value="auto">00:00:00</span>
+      <span>average</span>
+      <span>switch</span>
+    </div>
+  </div>
+
+  <!-- Overlay container -->
+  <div id="filterPanel0" class="filterOverlay" onclick="closeOverlayOnClickOutside(event)">
+
+
+
+  </div>
+
+  <script async defer src="index.css"></script>
+  <script async defer src="login.js"></script>
+  <script async defer src="statsUI.js"></script>
+  <script async defer src="settings.js"></script>
+  <script async defer src="devices.js"></script>
+  <script async defer src="preload.js"></script>
+
+</body>
+
+</html>
